@@ -5,6 +5,12 @@
   <title>Testing Site</title>
   <script>
     fetch(
+      "request-payload", {
+        method: "POST",
+        body: "body\n".repeat(5),
+      }
+    );
+    fetch(
       "?test=repeat-multiline", {
         method: "POST",
         body: "body\n".repeat(5),
@@ -46,3 +52,4 @@
   <h1>Testing Site</h1>
 </body>
 </html>
+
