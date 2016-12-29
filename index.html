@@ -11,6 +11,18 @@
       }
     );
     fetch(
+      "request-headers-from-upload-stream", {
+        method: "POST",
+        body: [
+          "content-type: application/x-www-form-urlencoded\r",
+          "custom-header: hello world!\r",
+          "\r",
+          "\r",
+          "foo=bar&baz=123"
+        ].join("\n"),
+      }
+    );
+    fetch(
       "?test=repeat-multiline", {
         method: "POST",
         body: "body\n".repeat(5),
